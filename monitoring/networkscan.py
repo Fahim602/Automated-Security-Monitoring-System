@@ -53,6 +53,10 @@ def process_result(result):
     try:
         if result:
             for sent, received in result:
+                if isinstance(received, QueryAnswer):
+                    # ARP response is usually the first layer in the received packet
+                    received = received[0]
+
                 if received.haslayer(ARP) and received[ARP].op == 2:
                 # Prints IP and related MAC address
                     print(f"IP Address: {received.psrc} | MAC Address: {received.hwsrc}")
