@@ -53,8 +53,11 @@ def process_result(result):
     try:
         if result:
             for sent, received in result:
+                if received.haslayer(ARP) and received[ARP].op == 2:
                 # Prints IP and related MAC address
-                print(f"IP Address: {received.psrc} | MAC Address: {received.hwsrc}")
+                    print(f"IP Address: {received.psrc} | MAC Address: {received.hwsrc}")
+                else:
+                    logging.warning("Received non-ARP response.")
         else:
             print("No response received.")
     except Exception as e:
