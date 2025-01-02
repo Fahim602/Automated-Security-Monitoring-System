@@ -1,7 +1,7 @@
 # Automated-Security-Monitoring-System
 
 ## Overview
-This project is a beginner level attempt to develop an Automated Security Monitoring System using Python and Kali Linux Environments in an attempt to develop hands on skills in Cybersecurity.
+This project is a beginner level attempt to develop an Automated Security Monitoring System using Python and Kali Linux Environments in an effort to develop hands on skills in Cybersecurity.
 The project focuses on:
 - Building foundational knowledge in network security tools.
 - Improving profiency in Python and it's application in real-world scenarios.
